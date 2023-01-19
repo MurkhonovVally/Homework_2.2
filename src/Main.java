@@ -52,3 +52,14 @@ public class Main {
         System.out.println("Задача 10");
     }
 }
+//System.out.println((char) 27 + "[  m     " + (char)27 + "[0m") - изменение цвета в консоли
+//System.out.println((char) 27 + "[30m     " + (char)27 + "[0m") - изменение цвета в консоли на черный
+//System.out.println((char) 27 + "[31m     " + (char)27 + "[0m") - изменение цвета в консоли на красный
+//System.out.println((char) 27 + "[32m     " + (char)27 + "[0m") - изменение цвета в консоли на зеленый
+//System.out.println((char) 27 + "[33m     " + (char)27 + "[0m") - изменение цвета в консоли на желтый
+//System.out.println((char) 27 + "[34m     " + (char)27 + "[0m") - изменение цвета в консоли на синий
+//System.out.println((char) 27 + "[35m     " + (char)27 + "[0m") - изменение цвета в консоли на пурпурный
+//System.out.println((char) 27 + "[36m     " + (char)27 + "[0m") - изменение цвета в консоли на голубой
+//System.out.println((char) 27 + "[37m     " + (char)27 + "[0m") - изменение цвета в консоли на белый
+//System.out.println((char) 27 + "[38m     " + (char)27 + "[0m") - изменение цвета в консоли на
+//System.out.println((char) 27 + "[39m     " + (char)27 + "[0m") - изменение цвета в консоли на
