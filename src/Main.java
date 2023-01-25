@@ -63,3 +63,9 @@ public class Main {
 //System.out.println((char) 27 + "[37m     " + (char)27 + "[0m") - изменение цвета в консоли на белый
 //System.out.println((char) 27 + "[38m     " + (char)27 + "[0m") - изменение цвета в консоли на
 //System.out.println((char) 27 + "[39m     " + (char)27 + "[0m") - изменение цвета в консоли на
+
+/*
+System.out.println((char) 27 + "[32m--------Конец задачи--------" + (char)27 + "[0m");
+System.out.println(" ");
+System.out.println((char) 27 + "[34m----------Задача 8----------" + (char)27 + "[0m");
+ */
