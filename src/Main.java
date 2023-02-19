@@ -1,71 +1,91 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
-        task4();
-        task5();
-        task6();
-        task7();
-        task8();
-        task9();
-        task10();
+
+        int intNumber = 33;
+        changeValue(intNumber);
+        System.out.println(intNumber);
+
+        //Так как мы не присваиваем переменной intNumber новое значение,
+        // а в методе его копия
+        // её значение не изменится, что бы получить новое значение для переменной инт
+        // нужно что бы метод возвращал новое значение его и присвоить переменной intNumber
+
+        intNumber = normalChangeValue(intNumber);
+        System.out.println(intNumber);
+
+
+        Integer integerNumber = 33;
+        changeValue(integerNumber);
+        System.out.println(integerNumber);
+        integerNumber = normalChangeValue(integerNumber);
+        System.out.println(integerNumber);
+
+        // Так как мы не присваиваем объекту integerNumber новое значение,
+        // а в метод передается ссылка на объект и по значению по этой ссылку создается его копия с которой мы и работаем
+        // а так как Integer не имеет опреаторов присвоеня в методе мы меняем лишь значение копии, а не самого объекта
+        // что бы получить новое значение для объекта Integer
+        // нужно что бы метод возвращал новое значение его и присвоить переменной integerNumber
+
+        Integer[] integerNumbers = {3,4};
+        changeValue(integerNumbers);
+        System.out.println(Arrays.toString(integerNumbers));
+
+        normalChangeValue(integerNumbers);
+        System.out.println(Arrays.toString(integerNumbers));
+
+        // в данном случае в методе мы присваиваем переменной ссылку на новый массив но в переменную integerNumbers
+        // мы не передаем значение нового массива, при этом при обращении к ячейкам массива в методе мы можем менять
+        // их значения так как мы обращаеся к конкретным ячейкам памяти.
+
+        Person person = new Person("Lyapis", "Trubetskoy");
+        person.changePerson(person);
+        System.out.println(person);
+
+        //метод переопределяет сслку на копию объекта person, но в мейн у нас остаётся та же ссылка на старый объект
+        // по этому вовод не меняется. так как изначальный объект остался неизменным
+        // для того что бы поменять поля объекта там нужно поменять сами поля нашего объекта,
+        // а не поменять ссылку на объект без возвращения ссылки на новый обхект и присвоения её новой переменной.
+
+        person.normalChangePerson(new Person("Ilya","Lagutenko"));
+        System.out.println(person);
+
+        //В данном случае мы отправляем на обработку новый объект с полями которые нам нужны,
+        // и модифицируем наш объект на основании данных котоыре мы получили их новго объекта,
+        // так как мы модифицируем обхект который находится по ссылке в переменной person, то результат изменится
+
+
+        //P.S. очень тяжело писать неправильно.
     }
 
-    public static void task1() {
-        System.out.println("Задача 1");
+    public static int normalChangeValue(int value) {
+        return value = 22;
+    }
+    //Overload
+    public static int normalChangeValue(Integer value) {
+        return value = 22;
+    }
+    //Overload
+    public static void normalChangeValue (Integer[] nums){
+        nums[0] = 1;
+        nums[1] = 2;
     }
 
-    public static void task2() {
-        System.out.println("Задача 2");
+    public static void changeValue  (int value)
+    {
+        value = 22;
+    }
+    //Overload
+    public static void changeValue (Integer value)
+    {
+        value = 22;
+    }
+    //Overload
+    public static void changeValue (Integer[] nums){
+        nums = new Integer[]{1, 2};
     }
 
-    public static void task3() {
-        System.out.println("Задача 3");
-    }
 
-    public static void task4() {
-        System.out.println("Задача 4");
-    }
 
-    public static void task5() {
-        System.out.println("Задача 5");
-    }
-
-    public static void task6() {
-        System.out.println("Задача 6");
-    }
-
-    public static void task7() {
-        System.out.println("Задача 7");
-    }
-
-    public static void task8() {
-        System.out.println("Задача 8");
-    }
-
-    public static void task9() {
-        System.out.println("Задача 9");
-    }
-
-    public static void task10() {
-        System.out.println("Задача 10");
-    }
 }
-//System.out.println((char) 27 + "[  m     " + (char)27 + "[0m") - изменение цвета в консоли
-//System.out.println((char) 27 + "[30m     " + (char)27 + "[0m") - изменение цвета в консоли на черный
-//System.out.println((char) 27 + "[31m     " + (char)27 + "[0m") - изменение цвета в консоли на красный
-//System.out.println((char) 27 + "[32m     " + (char)27 + "[0m") - изменение цвета в консоли на зеленый
-//System.out.println((char) 27 + "[33m     " + (char)27 + "[0m") - изменение цвета в консоли на желтый
-//System.out.println((char) 27 + "[34m     " + (char)27 + "[0m") - изменение цвета в консоли на синий
-//System.out.println((char) 27 + "[35m     " + (char)27 + "[0m") - изменение цвета в консоли на пурпурный
-//System.out.println((char) 27 + "[36m     " + (char)27 + "[0m") - изменение цвета в консоли на голубой
-//System.out.println((char) 27 + "[37m     " + (char)27 + "[0m") - изменение цвета в консоли на белый
-//System.out.println((char) 27 + "[38m     " + (char)27 + "[0m") - изменение цвета в консоли на
-//System.out.println((char) 27 + "[39m     " + (char)27 + "[0m") - изменение цвета в консоли на
-
-/*
-System.out.println((char) 27 + "[32m--------Конец задачи--------" + (char)27 + "[0m");
-System.out.println(" ");
-System.out.println((char) 27 + "[34m----------Задача 8----------" + (char)27 + "[0m");
- */
