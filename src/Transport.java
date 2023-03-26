@@ -1,4 +1,4 @@
-public class Transport {
+ public class Transport {
     private String modelName;
     private int wheelsCount;
     public Transport(String modelName, int wheelsCount) {
